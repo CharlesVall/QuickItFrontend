@@ -1,0 +1,23 @@
+<app-header/>
+<form [formGroup]="quickItForm">
+    <div class="page-container">
+        <div class="message-container">
+            <div class="message-author">
+                <input type="text" formControlName="author" placeholder="author"/>
+            </div>
+            <div class="message-header">
+                <input type="text" formControlName="title" placeholder="Title"/>
+            </div>
+            <div class="message-image">
+                <input type="text" formControlName="imageUrl" placeholder="imageUrl (optional)"/>
+                @if (imagePreview$ | async; as image) {
+                    <app-image-renderer [src]="image.imageUrl"/>
+                }
+            </div>  
+            <div class="message-body">
+                <textarea type="text" formControlName="message"></textarea>
+            </div>
+        </div>
+        <button class="button-submit" (click)="onSubmitForm()" [disabled]="!quickItForm.valid">Submit</button>
+    </div>
+</form>

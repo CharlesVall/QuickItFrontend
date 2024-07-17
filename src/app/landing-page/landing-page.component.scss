@@ -1,0 +1,58 @@
+.conteneur-landing {
+	margin: auto;
+	margin-top: 15%;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 62px;
+	background: #f8f8f8;
+	box-shadow:  29px 29px 36px #9d9d9d;
+  width: 40%;
+  padding-top: 18px;
+  padding-bottom: 10px;
+}
+
+
+.landing-button {  
+	display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 4px 4px 20px lightgray;
+  outline: none;
+  box-sizing: border-box;
+  width: 5%;
+  max-height: 40px;
+    &:active {
+      transform: translate(1px, 1px);
+      box-shadow: lightgray 8px 8px 40px;
+    }
+}
+
+#test-button {
+  margin: auto;
+  margin-top: 48px;
+}
+
+a {
+	text-decoration: none;
+	color: back;
+	&:active {
+		color: black;
+	}
+	&:click {
+		color: black;
+	}
+}
+
+p {
+  font-family: "Playwrite IT Moderna", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}

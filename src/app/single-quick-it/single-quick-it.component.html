@@ -1,0 +1,33 @@
+<app-header/>
+<div class="page-container">
+  <button class="button-less" (click)="onViewLess()">{{ buttonSymbole }}</button>
+  <div class="message-container">
+    <div class="message-author">
+      <p>{{ quickIt.author }}</p>
+    </div>
+    <div class="message-header">
+      <h2>{{ quickIt.title }}</h2>
+    </div>
+    @if (quickIt.imageUrl) {
+      <div class="message-image">
+        <app-image-renderer [src]="quickIt.imageUrl"/>
+      </div>
+      }
+    @if (quickIt.message) {
+    <div class="message-body">
+      <p>{{ quickIt.message }}</p>
+    </div>
+    }
+    <div class="message-footer">
+      <button (click)="onSnap()">
+        @if (!quickIt.liked) {
+        <span>♡</span>
+        }
+        @if (quickIt.liked) {
+        <span>♥️</span>
+        }
+        {{ quickIt.snaps }}
+      </button>
+    </div>
+  </div>
+</div>

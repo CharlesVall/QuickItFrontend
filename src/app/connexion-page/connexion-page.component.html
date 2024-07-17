@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="container-left">
+        <div class="container-logo">
+            <img src="output.png"/>
+            <p>QuickIt!</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="container-right">
+        <p class="form-title">connection :</p>
+        <p></p>
+        <form #connexionForm="ngForm" (ngSubmit)="onSubmitForm(connexionForm)">
+            <input type="email" id="emailInput" [(ngModel)]="userEmail" name="userEmail" placeholder="email"/>
+            <input type="password" id="passwordInput" [(ngModel)]="userPassword" name="userPassword" placeholder="password"/>
+            <button class="button-submit" type="submit">log in</button>
+        </form>
+        <a class="button-invited" routerLink="/quickit" class="button-invited">hors-ligne</a>
+    </div>
+</div>
+<app-footer/>

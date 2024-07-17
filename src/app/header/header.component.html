@@ -1,0 +1,17 @@
+<header>
+	<div class="header-left">
+	  <img src="img/input.png" alt="Logo" class="header-logo"/>
+	  <h1>QuickIt!</h1>
+	</div>
+	<div class="header-center">
+	  <nav>
+		<a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+		<a routerLink="/quickit" routerLinkActive="active">Main</a>
+	  </nav>
+	</div>
+	<div class="header-right">
+		<button class="button-add-quick-it" (click)="onAddQuickIt()">+</button>
+		<button class="button-sign-up">sign up</button>
+		<button class="button-login-in" routerLink="">login in</button>
+	</div>
+</header>
